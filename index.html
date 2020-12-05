@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="splide\dist\css\splide.min.css">
+    <script src="splide\dist\js\splide.min.js"></script>
+    <script src="./script.js"></script>
+    <style>
+
+
+        
+        
+        .splide__slide {
+            background-color: black; /* Тень на всех слайдах*/
+            transition: all .4s ease-out;
+        }
+        
+        /* Убираем тень с активного слайда */
+        li.is-active img {
+            opacity: 1;
+        }
+
+        
+        /* Повторот всех слайдов */
+        .skew {
+            position: relative;
+            transform: skew(-20deg); 
+            transform-origin: top left;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .splide__slide img {
+            transition: all .4s ease-out;
+            opacity: 0.3;
+            height: 100%;
+
+            /* Повторот картинки в ровное положение и сдвиг немного влево */
+            position: absolute;
+            left: 25%;
+            transform: translateX(-30%) skew(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide skew">
+                    <img src="https://img1.goodfon.ru/wallpaper/nbig/6/ae/cvety-rozy-priroda.jpg" alt="">
+                </li>
+                <li class="splide__slide skew">
+                    <img src="https://lh3.googleusercontent.com/proxy/kCxqHS5UC19FgDrVN7_L-lXbH9Wi7qDDDcsUpGev3QJjpOBXdjXAEccJzq0R9bJueRKwhzTXRFh5zuWcMaDuWk8jUHZhV6bdhudyF95OoF52j6KVEQfv5i5t_X7gnQ" alt="">
+                </li>
+                <li class="splide__slide skew">
+                    <img src="https://s1.1zoom.ru/b5050/612/Roses_Wine_color_549705_3840x2400.jpg" alt="">
+                </li>
+                <li class="splide__slide skew">
+                    <img src="https://img5.goodfon.ru/wallpaper/nbig/7/26/astry-osennie-tsvety-klumba.jpg" alt="">
+                </li>
+                <li class="splide__slide skew">
+                    <img src="https://99px.ru/sstorage/53/2013/02/tmb_61082_4660.jpg" alt="">
+                </li>
+                <li class="splide__slide skew">
+                    <img src="https://million-wallpapers.ru/wallpapers/5/79/478290089663935.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
